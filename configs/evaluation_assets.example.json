@@ -1,0 +1,12 @@
+{
+  "provenance": {},
+  "inception": "assets/metrics/inception-2015-12-05.pt",
+  "clip": "assets/metrics/clip-vit-g14-laion2b-hf",
+  "hpsv20": "assets/metrics/hpsv20-hf",
+  "pickscore": "assets/metrics/PickScore_v1",
+  "pickscore_processor": "assets/metrics/pickscore-processor",
+  "aesthetic_clip": "assets/metrics/aesthetic-clip",
+  "aesthetic_head": "assets/metrics/aesthetic-linear-768.pth",
+  "image_reward": "assets/metrics/ImageReward.pt",
+  "image_reward_med_config": "assets/metrics/med_config.json"
+}

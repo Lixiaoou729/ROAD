@@ -1,0 +1,38 @@
+family: sdxl
+assets:
+  base_model: assets/sdxl
+  dinov3: assets/dinov3-vitb16
+  manifest: data/sdxl/train.jsonl
+  text_cache: data/sdxl-text
+mixing:
+  refresh_interval: 5000
+regularization:
+  type: jr1
+  gamma: 0.0075
+  lazy_interval: 16
+training:
+  output: outputs/sdxl
+  seed: 10
+  steps: 100000
+  microbatch: 2
+  accumulation: 4
+  world_size: 8
+  global_batch: 64
+  generator_lr: 5.0e-07
+  critic_lr: 5.0e-06
+  generator_clip: 10.0
+  critic_clip: 10.0
+  precision: bf16
+  vae_dtype: bf16
+  generator_checkpointing: true
+  vae_checkpointing: true
+  critic_checkpointing: true
+  feature_checkpointing: true
+  generator_vjp: three_stage
+  zero1: true
+  checkpoint_interval: 5000
+  export_interval: 500
+  log_interval: 10
+  data_workers: 4
+  prefetch_factor: 2
+  pin_memory: true

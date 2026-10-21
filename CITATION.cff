@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the ROAD manuscript when using this research implementation."
+type: software
+title: "ROAD: Modern Adversarial Training for Simple One-Step Distillation at Scale"
+authors:
+  - family-names: Li
+    given-names: Xiaoou
+    affiliation: Shanghai Jiaotong University
+  - family-names: You
+    given-names: Shan
+    affiliation: SenseTime
+  - family-names: Huang
+    given-names: Tao
+    affiliation: Shanghai Jiaotong University
+version: 0.2.0
+abstract: "Representation-grounded One-step Adversarial Distillation for SDXL and SD3.5-M, using a frozen representation backbone, a Transformer critic, refreshed random feature mixing and Jacobian R1 regularization."

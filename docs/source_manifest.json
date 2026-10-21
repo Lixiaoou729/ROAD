@@ -1,0 +1,40 @@
+[
+  {
+    "source": "snapshot/SD35/sd35_generator_backend.py",
+    "sha256": "68b05a3a2f83325208d582dfa0714fafa7596098ad57de3fdcaf902f3ed008a7",
+    "target": "road/models/sd35_generator_backend.py"
+  },
+  {
+    "source": "snapshot/SD35/sd35_text_condition.py",
+    "sha256": "69cdc5cedab169ebe9174cc68a3047ebe436e208e7f9593ad911e824a67db588",
+    "target": "road/models/sd35_text_condition.py"
+  },
+  {
+    "source": "snapshot/SD35/sd35_compat.py",
+    "sha256": "bde17589cd8b47dae99d54f6e5ba3afcc3fe8c7da5a8784687241ebdfea29999",
+    "target": "road/models/sd35_compat.py"
+  },
+  {
+    "source": "local-SDXL/pg_d2o/pg_modules/token_spatial.py",
+    "sha256": "fc4cf1e6650bc35df21fc072b72876eaeb555ae1f7a923cf9298e32fc1e3ca8c",
+    "target": "road/critic/token_spatial.py"
+  },
+  {
+    "source": "local-SDXL/pg_d2o/pg_modules/transformer_disc.py",
+    "sha256": "a80710c82974a5982d3fabb540890d85531f11f3b0b9953005e8ac271789e6d2",
+    "target": "road/critic/attention.py",
+    "change": "Selected attention classes; removed conv-QKV; cross-attention output now SN."
+  },
+  {
+    "source": "snapshot/main/coco_eval_clip/preference_metrics.py",
+    "sha256": "f937f6c1ad0cf9475030d0cf0fb6253ddd5cc7d3cf1c792b42883a8c67a61857",
+    "target": "road/evaluation/preference.py",
+    "change": "Selected HPS/PickScore/aesthetic helpers; removed unused metrics; paper x100 cosine scale; weights-only load."
+  },
+  {
+    "source": "snapshot/codex_oom_sd35m_d2o_transformer/THIRD_PARTY_NOTICES.md",
+    "sha256": "80c66bc2ee72dccf72473bef960a30b8552fda4e505350425fb1ae2a30831dce",
+    "target": "third_party/SD35_SOURCE_NOTICES.md",
+    "change": "Preserved original notice."
+  }
+]

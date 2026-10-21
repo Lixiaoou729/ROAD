@@ -1,0 +1,38 @@
+family: sd35m
+assets:
+  base_model: assets/sd35m
+  dinov3: assets/dinov3-vitb16
+  manifest: data/sd35m/train.jsonl
+  text_cache: data/sd35m-text
+mixing:
+  refresh_interval: 5000
+regularization:
+  type: jr1
+  gamma: 0.00075
+  lazy_interval: 16
+training:
+  output: outputs/sd35m
+  seed: 10
+  steps: 100000
+  microbatch: 1
+  accumulation: 2
+  world_size: 16
+  global_batch: 32
+  generator_lr: 5.0e-07
+  critic_lr: 5.0e-06
+  generator_clip: 1.0
+  critic_clip: 10.0
+  precision: bf16
+  vae_dtype: bf16
+  generator_checkpointing: true
+  vae_checkpointing: true
+  critic_checkpointing: true
+  feature_checkpointing: true
+  generator_vjp: three_stage
+  zero1: true
+  checkpoint_interval: 5000
+  export_interval: 500
+  log_interval: 10
+  data_workers: 4
+  prefetch_factor: 2
+  pin_memory: true

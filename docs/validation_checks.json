@@ -1,0 +1,86 @@
+{
+  "record_date": "2026-10-16",
+  "applies_to": "pre-2026-10-19-refinement only",
+  "current_revision_validated": false,
+  "notice": "Archived results; no tests or runtime validation executed during the 2026-10-19 refinement.",
+  "platform": "macOS-15.5-arm64-arm-64bit",
+  "python": "3.11.9",
+  "original_files_compared": 4578,
+  "original_source_changes": 0,
+  "original_added_files": 0,
+  "finder_metadata_changes": 1,
+  "cli_checks": [
+    {
+      "module": "road.prepare_data",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "module": "road.text_cache",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "module": "road.train_sdxl",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "module": "road.train_sd35m",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "module": "road.infer",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "module": "road.import_generator",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "module": "road.evaluation.generate",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "module": "road.evaluation.coco",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "module": "road.evaluation.select",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "module": "road.evaluation.geneval",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "module": "sdxl config",
+      "passed": true
+    },
+    {
+      "module": "sd35m config",
+      "passed": true
+    }
+  ],
+  "hygiene_pattern_findings": [],
+  "scope": "CPU/static checks only; no pretrained CUDA execution or paper metric reproduction",
+  "pytest": {
+    "passed": 32,
+    "skipped": 0,
+    "warnings": 1,
+    "seconds": 23.42
+  },
+  "ruff_check": "passed",
+  "ruff_format": "passed",
+  "pip_check": "passed",
+  "compileall": "passed",
+  "cuda_available": false,
+  "published": false
+}

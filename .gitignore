@@ -1,0 +1,37 @@
+# Local environments and tooling
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.DS_Store
+.idea/
+.vscode/
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Training data, caches, outputs, and model weights
+data/
+outputs/
+checkpoints/
+.cache/
+wandb/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.tar
+*.tar.gz
+*.zip
+# Only the paper visualization is tracked under assets
+/assets/*
+!/assets/road-overview.png
+!/assets/README.md

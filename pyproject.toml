@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "road-distillation"
+version = "0.2.0"
+readme = "README.md"
+description = "Representation-grounded One-step Adversarial Distillation"
+requires-python = ">=3.11"
+dependencies = ["torch==2.8.0", "diffusers==0.36.0", "transformers==4.57.1", "accelerate==1.7.0", "safetensors>=0.4", "PyYAML>=6", "numpy>=1.26", "Pillow>=10", "sentencepiece>=0.2", "protobuf>=3.20"]
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+eval = ["clean-fid==0.1.35", "open-clip-torch==2.32.0", "torchvision==0.23.0", "scipy>=1.11", "tqdm>=4.66", "image-reward==1.5", "clip @ git+https://github.com/openai/CLIP.git@d05afc436d78f1c48dc0dbf8e5980a9d471f35f6"]
+[tool.setuptools.packages.find]
+include = ["road*"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff.lint]
+select = ["F", "I"]
+[tool.ruff.lint.per-file-ignores]
+# Explicit reference clearing before metric cleanup frees GPU allocations.
+"road/evaluation/preference.py" = ["F841"]
